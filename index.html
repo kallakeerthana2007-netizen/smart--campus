@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Campus Shield</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div >
+
+<h1 style="text-align:center">ST.MARY'S SMART CAMPUS SHIELD</h1>
+<p style="text-align:center">This system helps student complaint directly to management</p>
+
+
+</div>
+<!-- LOGIN PAGE -->
+<div id="loginSection">
+    <div class="login-box">
+        <h2>Smart Campus Shield</h2>
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <div id="loginMessage"></div>
+    </div>
+</div>
+
+<!-- MAIN PAGE -->
+<div id="mainContent">
+
+    <header>
+        <h2>Complaint Registration</h2>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <form onsubmit="submitComplaint(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <select id="category" required>
+            <option value="">Select Complaint Type</option>
+            <option>Harassment</option>
+            <option>Infrastructure</option>
+            <option>Safety Issue</option>
+            <option>Other</option>
+        </select>
+
+        <textarea id="description" placeholder="Describe your complaint" required></textarea>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
